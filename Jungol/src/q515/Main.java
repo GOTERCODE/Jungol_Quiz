@@ -1,28 +1,48 @@
 package q515;
 
-import java.util.Scanner;		//Scanner class = »ç¿ëÀÚ ÀÔ·Â
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		
-		int a = sc.nextInt();	//Ã¹¹øÂ° ¼ö½Ä »ç¿ëÀÚ ÀÔ·Â º¯¼ö ¼±¾ð
-		int b = sc.nextInt();
-		
-		sc.close();
-		
-		int c = a * b;		// º¯¼ö c(Ã¹¹øÂ° ¼ö½Ä ´ä) ¼±¾ð
-		int d = a / b;
-		
-		System.out.println(a + " * " + b + " = " + c);
-		System.out.println(a + " / " + b + " = " + d);
-		//--------------------------------------------------- ³»°¡ ÇØº» ºñÈ¿À²ÀûÀÎ ¹æ¹ý _ °á°ú°ª(c,d) º¯¼ö ¼±¾ð
-		System.out.println(a + " * " + b + " = " + (a * b));
-		System.out.println(a + " * " + b + " = " + (a / b));
-		//--------------------------------------------------- °á°ú°ª(c,d) Ãâ·Â¹® ÀÚÃ¼¿¡ ¼ö½Ä ¼³Á¤
-		System.out.printf("%d * %d = %d\n", a, b, a * b);
-		System.out.printf("%d / %d = %d\n", a, b, a / b);
-		//--------------------------------------------------- °á°ú°ª(c,d) ¹®ÀÚ¿­ Ãâ·Â Çü½Ä ¼³Á¤
+
+		Scanner A = new Scanner(System.in);
+
+		double weightInp = A.nextDouble();
+
+		A.close();
+
+		if (weightInp > 88.45) {
+			System.out.println("Heavyweight");
+		} else if (weightInp <= 50.80) {
+			System.out.println("Flyweight");
+		} else if (weightInp <= 61.23) {
+			System.out.println("Lightweight");
+		} else if (weightInp <= 72.57) {
+			System.out.println("Middleweight");
+		} else if (weightInp <= 88.45) {
+			System.out.println("Cruiserweight");
+
+		}
 	}
 }
+
+/*
+ * ë³µì‹±ì²´ê¸‰ì€ ëª¸ë¬´ê²Œê°€
+ * 
+ * 50.80kg ì´í•˜ë¥¼ Flyweight,Â 
+ * 
+ * 61.23kg ì´í•˜ë¥¼ Lightweight,Â 
+ * 
+ * 72.57kg ì´í•˜ë¥¼ Middleweight,Â 
+ * 
+ * 88.45kg ì´í•˜ë¥¼ Cruiserweight,Â 
+ * 
+ * 88.45kg ì´ˆê³¼ë¥¼Â Heavyweight
+ * 
+ * ë¼ê³  í•˜ìž.
+ * 
+ * Â 
+ * 
+ * ëª¸ë¬´ê²Œë¥¼ ìž…ë ¥ë°›ì•„ ì²´ê¸‰ì„ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+ */
