@@ -10,21 +10,21 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		info[] persons = new info[5];
+		Info[] persons = new Info[5];
 
 		for (int i = 0; i < 5; i++) {
 			String name = sc.next();
 			int height = sc.nextInt();
 			double weight = sc.nextDouble();
 
-			persons[i] = new info(name, height, weight);
+			persons[i] = new Info(name, height, weight);
 
 		}
 		sc.close();
 		
 		
 		
-		Arrays.sort(persons, Comparator.comparing(info::getName));
+		Arrays.sort(persons, Comparator.comparing(Info::getName));
 		System.out.println("name");
 		for (int i = 0; i < 5; i++) {
 
@@ -37,7 +37,7 @@ public class Main {
 		
 		
 		System.out.println("weight");
-		Arrays.sort(persons, Comparator.comparingDouble(info::getweight).reversed());
+		Arrays.sort(persons, Comparator.comparingDouble(Info::getweight).reversed());
 	
 		for (int i = 0; i < 5; i++) {
 			persons[i].print();
@@ -47,12 +47,12 @@ public class Main {
 
 }
 
-class info {
+class Info {
 	private String name;
 	private int height;
 	private double weight;
 
-	public info(String name, int height, double weight) {
+	public Info(String name, int height, double weight) {
 		this.name = name;
 		this.height = height;
 		this.weight = weight;
