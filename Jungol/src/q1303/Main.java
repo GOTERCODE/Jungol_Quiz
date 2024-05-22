@@ -8,11 +8,10 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		int m = sc.nextInt();
-		
 
-		for (int i = 1; i < n * m+1; i++) {
+		for (int i = 1; i < n * m + 1; i++) {
 			System.out.print(i + " ");
-			if(i%m==0) {
+			if (i % m == 0) {
 				System.out.println("");
 			}
 		}
